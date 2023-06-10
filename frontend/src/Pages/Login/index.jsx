@@ -52,7 +52,8 @@ const Login = () => {
   return (
     <div className="flex flex-col py-2 justify-center items-center">
       <form
-        onSubmit={onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 my-10 max-w-sm w-full mx-auto">
+        onSubmit={onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 my-10 max-w-lg w-full mx-auto">
+          <p className="text-center text-xl font-bold my-5">Login to Cryptooescrow.com</p>
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"

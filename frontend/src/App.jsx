@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
-    <div className='bg-teal-300'>
+    <div className={`backgroung`}>
       <Layout />
       <ToastContainer />
     </div>

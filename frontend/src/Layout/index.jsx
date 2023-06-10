@@ -15,10 +15,10 @@ const Layout = () => {
   const headerStyle = isHomePage ? 'bg-transparent' : 'bg-white';
   return (
     <div
-      className={`${open ? "h-screen overflow-y-hidden md:min-h-screen md:overflow-y-visible" : "min-h-screen"} overflow-x-hidden flex flex-col justify-between text-white bg-sky-600`}
+      className={`${open ? "h-screen overflow-y-hidden md:min-h-screen md:overflow-y-visible" : "min-h-screen"} overflow-x-hidden flex flex-col justify-between text-white `}
     >
       <div>
-        <Header open={open} setOpen={setOpen} headerStyle={headerStyle} />
+        <Header open={open} setOpen={setOpen} headerStyle={headerStyle} isHomePage={isHomePage} />
       </div>
       <div className={`text-black flex-1`}>
         <Routes>

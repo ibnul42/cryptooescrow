@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import { AiOutlineSearch } from 'react-icons/ai'
 
-function Header({ open, setOpen, headerStyle }) {
+function Header({ open, setOpen, headerStyle, isHomePage }) {
   // const [activeId, setActiveId] = useState('/')
   const navLinkStyles = ({ isActive }) => {
     return {
@@ -17,13 +17,12 @@ function Header({ open, setOpen, headerStyle }) {
   ]
   return (
     <div className={`z-40 bg-primary text-white ${headerStyle}`} id="header">
-      <div className="max-w-7xl mx-auto px-3 lg:px-0 flex justify-between py-3">
+      <div className="max-w-7xl mx-auto px-3 lg:px-0 flex justify-between py-1">
         <div className="flex items-center cursor-pointer">
           {/* <p className="font-bold text-2xl">Logo</p> */}
           {/* <img src="/assets/ui_logo.svg" className='h-10 w-10' alt="logo" /> */}
           <NavLink to="/" className="text-xl font-bold">
-            {/* <img src="/assets/logo.png" className="w-8 h-8" alt="cryptoscarecrow" /> */}
-            <p>cryptoscarecrow</p>
+            <img src={`${isHomePage ? '/assets/logo.svg' : '/assets/logo_bg.svg'}`} className="w-36 h-12" alt="cryptoscarecrow" />
           </NavLink>
         </div>
         <div
@@ -66,10 +65,10 @@ function Header({ open, setOpen, headerStyle }) {
             </div>
           ))}
         </ul>
-        <div className="flex gap-3">
-          <Link to="" className="flex items-center justify-center"><AiOutlineSearch fill="black" className="h-5 w-5" /></Link>
-          <Link to="/login" className="bg-[rgba(59,185,93,0.8)] hover:bg-[rgba(59,185,93,1)] text-black rounded px-5 py-1 font-medium" >Login</Link>
-          <Link to="/login" className="bg-white border text-black rounded px-5 py-1 font-medium" >Signup</Link>
+        <div className="flex gap-3 items-center">
+          <Link to="" className="flex items-center justify-center"><AiOutlineSearch fill={`${isHomePage ? 'white' : 'black'}`} className="h-5 w-5" /></Link>
+          <Link to="/login" className="bg-[rgba(59,185,93,0.8)] hover:bg-[rgba(59,185,93,1)] text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Login</Link>
+          <Link to="/login" className="bg-white border text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Signup</Link>
         </div>
       </div>
     </div>
