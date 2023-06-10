@@ -1,8 +1,12 @@
+import Layout from './Layout'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <p className='text-center text-2xl font-semibold'>Please be patient, This website is under maintenance</p>
+    <div className='bg-teal-300'>
+      <Layout />
+      <ToastContainer />
     </div>
   )
 }

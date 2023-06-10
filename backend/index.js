@@ -1,12 +1,12 @@
 const path = require("path")
 const express = require("express")
-require("dotenv").config({path: path.resolve(__dirname, '../config.env')})
+require('dotenv').config()
 const color = require("colors")
 const cors = require("cors")
-// const connectDB = require("./config/db")
-// const { errorHandler } = require("./middleware/errorMiddleware")
+const connectDB = require("./config/db")
+const { errorHandler } = require("./middleware/errorMiddleware")
 
-// connectDB()
+connectDB()
 
 const port = process.env.PORT 
 
@@ -16,13 +16,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.status(200).json({ msg: 'OK' })
-})
 
-
-
-// app.use("/api/users", require("./routes/userRoutes"))
+app.use("/api/users", require("./routes/userRoutes"))
 
 // server frontend
 // if (process.env.NODE_ENV === "production") {
