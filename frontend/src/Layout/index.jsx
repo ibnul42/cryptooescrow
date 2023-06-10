@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./Header"
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const Layout = () => {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ const Layout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

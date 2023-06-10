@@ -68,7 +68,7 @@ function Header({ open, setOpen, headerStyle, isHomePage }) {
         <div className="flex gap-3 items-center">
           <Link to="" className="flex items-center justify-center"><AiOutlineSearch fill={`${isHomePage ? 'white' : 'black'}`} className="h-5 w-5" /></Link>
           <Link to="/login" className="bg-[rgba(59,185,93,0.8)] hover:bg-[rgba(59,185,93,1)] text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Login</Link>
-          <Link to="/login" className="bg-white border text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Signup</Link>
+          <Link to="/register" className="bg-white border text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Signup</Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import { login } from "../../features/auth/authSlice"
 import { HiOutlineMail } from 'react-icons/hi'
@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <div className="flex flex-col py-2 justify-center items-center">
       <form
-        onSubmit={onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 my-10 max-w-3xl w-full mx-auto">
+        onSubmit={onSubmit} className="bg-white shadow-md rounded px-5 md:px-16 lg:px-24 pt-6 pb-8 my-10 max-w-3xl w-full mx-auto">
         <p className="text-center text-xl font-bold my-5">Login to Cryptooescrow.com</p>
         <div className="mb-4">
           <label
@@ -75,7 +75,7 @@ const Login = () => {
               onChange={onChange}
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <HiOutlineMail className="w-5 h-5 text-lime-600" />
+              <HiOutlineMail className="w-5 h-5 text-[#3aba5d]" />
               <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
             </div>
           </div>
@@ -99,14 +99,14 @@ const Login = () => {
               onChange={onChange}
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FaLock className="w-5 h-5 text-lime-600" />
+              <FaLock className="w-5 h-5 text-[#3aba5d]" />
               <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-5 items-center justify-center">
           <button
-            className="bg-primary hover:bg-hover text-white bg-lime-600 w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
+            className="bg-primary hover:bg-hover text-white bg-[#3aba5d] w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
             type="submit"
           >
             log in
@@ -114,12 +114,11 @@ const Login = () => {
 
           <p className="uppercase text-center">- or -</p>
 
-          <button
-            className="bg-primary hover:bg-hover text-lime-600 border border-lime-600 w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
+          <Link to="/register"
+            className="bg-primary hover:bg-hover text-[#3aba5d] border border-[#3aba5d] w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center"
           >
             Register an Account
-          </button>
+          </Link>
           {/* <a
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             href="#"
