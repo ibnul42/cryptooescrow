@@ -16,8 +16,8 @@ function Header({ open, setOpen, headerStyle, isHomePage }) {
     // { name: "about", link: "/about" },
   ]
   return (
-    <div className={`z-40 bg-primary text-white ${headerStyle}`} id="header">
-      <div className="max-w-7xl mx-auto px-3 lg:px-0 flex justify-between py-1">
+    <div className={`z-40 bg-primary text-white ${headerStyle} px-3`} id="header">
+      <div className="max-w-6xl mx-auto px-3 lg:px-0 flex justify-between py-1">
         <div className="flex items-center cursor-pointer">
           {/* <p className="font-bold text-2xl">Logo</p> */}
           {/* <img src="/assets/ui_logo.svg" className='h-10 w-10' alt="logo" /> */}
@@ -68,7 +68,7 @@ function Header({ open, setOpen, headerStyle, isHomePage }) {
         <div className="flex gap-3 items-center">
           <Link to="" className="flex items-center justify-center"><AiOutlineSearch fill={`${isHomePage ? 'white' : 'black'}`} className="h-5 w-5" /></Link>
           <Link to="/login" className="bg-[rgba(59,185,93,0.8)] hover:bg-[rgba(59,185,93,1)] text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Login</Link>
-          <Link to="/register" className="bg-white border text-black rounded px-5 py-1 font-medium flex justify-center items-center h-10" >Signup</Link>
+          <Link to="/register" className="bg-transparent border border-white text-white rounded px-5 py-1 font-medium flex justify-center items-center h-10">Signup</Link>
         </div>
       </div>
     </div>
