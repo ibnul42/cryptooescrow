@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken")
 const User = require("../models/userModel")
 
 const registerUser = asyncHandler(async (req, res) => {
-    console.log(req.body)
   const { type, email, password } = req.body
 
   // check if all fields are inputed

@@ -73,7 +73,6 @@ const Register = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         if (charCheck.sevenChar && charCheck.upLowerCase && charCheck.upLowerCase) {
-            console.log(123456)
             dispatch(register({ ...inputValue, type }))
         }
         // setLogoutUser(false)

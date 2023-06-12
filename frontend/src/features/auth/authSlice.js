@@ -133,6 +133,7 @@ export const authSlice = createSlice({
         state.isLoggedIn = true
         state.isLoggedOut = false
         state.user = action.payload
+        state.message = ''
       })
       .addCase(login.rejected, (state, action) => {
         state.isLoading = false

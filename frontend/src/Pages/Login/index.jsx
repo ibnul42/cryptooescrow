@@ -35,7 +35,7 @@ const Login = () => {
       toast.success("Login successfull!")
       navigate("/")
     }
-  }, [user, isSuccess, isError, logoutUser])
+  }, [user, isSuccess, isError, logoutUser, message, navigate])
 
   const onChange = (e) => {
     const { name, value } = e.target
