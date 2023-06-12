@@ -9,7 +9,7 @@ const initialState = {
   isError: false,
   isSuccess: false,
   isLoggedIn: false,
-  isLoggedOut: true,
+  isLoggedOut: false,
   isRegistered: false,
   message: "",
 }
@@ -90,6 +90,7 @@ export const authSlice = createSlice({
       state.isError = false
       state.isSuccess = false
       state.isRegistered = false
+      state.isLoggedOut = false
       state.message = ""
     },
   },

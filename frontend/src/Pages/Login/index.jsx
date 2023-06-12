@@ -33,7 +33,7 @@ const Login = () => {
     // }
     if (user && logoutUser === false) {
       toast.success("Login successfull!")
-      navigate("/admin/profile")
+      navigate("/")
     }
   }, [user, isSuccess, isError, logoutUser])
 
