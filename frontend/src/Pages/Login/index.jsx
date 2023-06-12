@@ -75,7 +75,7 @@ const Login = () => {
               onChange={onChange}
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <HiOutlineMail className="w-5 h-5 text-[#3aba5d]" />
+              <HiOutlineMail className="w-5 h-5 text-primary" />
               <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
             </div>
           </div>
@@ -99,14 +99,14 @@ const Login = () => {
               onChange={onChange}
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FaLock className="w-5 h-5 text-[#3aba5d]" />
+              <FaLock className="w-5 h-5 text-primary" />
               <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-5 items-center justify-center">
           <button
-            className="bg-primary hover:bg-hover text-white bg-[#3aba5d] w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
+            className="bg-primary hover:bg-hover text-white bg-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
             type="submit"
           >
             log in
@@ -115,7 +115,7 @@ const Login = () => {
           <p className="uppercase text-center">- or -</p>
 
           <Link to="/register"
-            className="bg-primary hover:bg-hover text-[#3aba5d] border border-[#3aba5d] w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center"
+            className="bg-primary hover:bg-hover text-primary border border-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center"
           >
             Register an Account
           </Link>

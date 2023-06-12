@@ -17,7 +17,7 @@ const Home = () => {
         <div className="flex flex-col gap-3">
           <div className="relative flex bg-white rounded">
             <div className="inset-y-0 left-0 pl-3 flex items-center">
-              {/* <HiOutlineMail className="w-5 h-5 text-[#3aba5d]" /> */}
+              {/* <HiOutlineMail className="w-5 h-5 text-primary" /> */}
               <p className="text-black text-sm font-medium block">I&apos;m <span className='text-[#0381fe]'>selling</span></p>
               <RiArrowDownSFill className='h-5 w-5 text-black' />
               <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
@@ -37,7 +37,7 @@ const Home = () => {
           </div>
           <div className="relative flex bg-white rounded">
             <div className="inset-y-0 left-0 pl-3 flex items-center">
-              {/* <HiOutlineMail className="w-5 h-5 text-[#3aba5d]" /> */}
+              {/* <HiOutlineMail className="w-5 h-5 text-primary" /> */}
               <p className="text-black text-sm font-medium block">For $ 800</p>
               <RiArrowDownSFill className='h-5 w-5 text-black' />
             </div>
@@ -57,7 +57,7 @@ const Home = () => {
             </div>
           </div>
           <Link to="/login"
-            className="bg-primary text-center hover:bg-hover text-white bg-[#3aba5d] w-full md:w-1/2 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-primary text-center hover:bg-hover text-white bg-primary w-full md:w-1/2 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
           >
             Get started now

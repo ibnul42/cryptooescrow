@@ -85,16 +85,16 @@ const Register = () => {
                     <div className="flex items-center gap-2 pt-1">
                         <p className="font-normal text-sm">Buyer</p>
                         <div onClick={() => setType('buyer')} className="flex justify-center items-center cursor-pointer">
-                            <div className="h-4 w-4 border border-[#3aba5d] rounded flex justify-center items-center">
-                                <div className={`h-3 w-3 ${type === 'buyer' ? 'bg-[#3aba5d]' : ''} rounded`}></div>
+                            <div className="h-4 w-4 border border-primary rounded flex justify-center items-center">
+                                <div className={`h-3 w-3 ${type === 'buyer' ? 'bg-primary' : ''} rounded`}></div>
                             </div>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 pt-1">
                         <p className="font-normal text-sm">Seller</p>
                         <div onClick={() => setType('seller')} className="flex justify-center items-center cursor-pointer">
-                            <div className="h-4 w-4 border border-[#3aba5d] rounded flex justify-center items-center">
-                                <div className={`h-3 w-3 ${type === 'seller' ? 'bg-[#3aba5d]' : ''} rounded`}></div>
+                            <div className="h-4 w-4 border border-primary rounded flex justify-center items-center">
+                                <div className={`h-3 w-3 ${type === 'seller' ? 'bg-primary' : ''} rounded`}></div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const Register = () => {
                             onChange={onChange}
                         />
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <HiOutlineMail className="w-5 h-5 text-[#3aba5d]" />
+                            <HiOutlineMail className="w-5 h-5 text-primary" />
                             <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
                         </div>
                     </div>
@@ -142,20 +142,20 @@ const Register = () => {
                             onChange={onChange}
                         />
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <FaLock className="w-5 h-5 text-[#3aba5d]" />
+                            <FaLock className="w-5 h-5 text-primary" />
                             <div className="ml-1 h-6 w-[1px] bg-gray-200"></div>
                         </div>
                     </div>
                 </div>
                 <div className="mb-4">
-                    <p className="text-[#3aba5d]">Strong passwords have: </p>
+                    <p className="text-primary">Strong passwords have: </p>
                     <p className="flex items-center"> <span>{charCheck.sevenChar === true ? <TiTick className="text-gray-600" /> : <RxCross2 className="text-red-600" />} </span>At least 7 characters</p>
                     <p className="flex items-center"><span>{charCheck.upLowerCase === true ? <TiTick className="text-gray-600" /> : <RxCross2 className="text-red-600" />} </span>At least one uppercase and one lowercase character</p>
                     <p className="flex items-center"><span>{charCheck.special === true ? <TiTick className="text-gray-600" /> : <RxCross2 className="text-red-600" />} </span>At least one number or special character</p>
                 </div>
                 <div className="flex flex-col gap-5 items-center justify-center">
                     <button
-                        className="bg-primary hover:bg-hover text-white bg-[#3aba5d] w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
+                        className="bg-primary hover:bg-hover text-white bg-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
                         type="submit"
                     >
                         Sign up
@@ -164,7 +164,7 @@ const Register = () => {
                     <p className="text-gray-600 text-center">By registering you agree to the Cryptooescrow.com's <span className="text-[#3a88f5] font-semibold cursor-pointer">Terms of Using the Cryptooescrow Platform</span> and <span className="text-[#3a88f5] font-semibold cursor-pointer">Privacy Policy</span></p>
 
                     <Link to="/login"
-                        className="bg-primary hover:bg-hover text-[#3aba5d] font-medium rounded focus:outline-none focus:shadow-outline"
+                        className="bg-primary hover:bg-hover text-primary font-medium rounded focus:outline-none focus:shadow-outline"
                     >
                         Login to Cryptooescrow.com
                     </Link>

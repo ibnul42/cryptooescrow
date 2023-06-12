@@ -4,6 +4,8 @@ import Header from "./Header"
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import Customer from "../Pages/Customer";
+import Order from "../Pages/Order";
 
 const Layout = () => {
   const [open, setOpen] = useState(false);
@@ -26,6 +28,8 @@ const Layout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/customer" element={<Customer />} />
+          <Route path="/order" element={<Order />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
