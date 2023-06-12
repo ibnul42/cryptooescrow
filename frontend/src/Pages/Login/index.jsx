@@ -106,7 +106,7 @@ const Login = () => {
         </div>
         <div className="flex flex-col gap-5 items-center justify-center">
           <button
-            className="bg-primary hover:bg-hover text-white bg-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
+            className="hover:bg-hover text-white bg-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase"
             type="submit"
           >
             log in
@@ -115,7 +115,7 @@ const Login = () => {
           <p className="uppercase text-center">- or -</p>
 
           <Link to="/register"
-            className="bg-primary hover:bg-hover text-primary border border-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center"
+            className="hover:bg-hover text-primary border border-primary w-full font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-center items-center"
           >
             Register an Account
           </Link>

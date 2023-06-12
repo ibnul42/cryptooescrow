@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use("/api/users", require("./routes/userRoutes"))
 
+app.use(errorHandler)
 // server frontend
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, "../frontend/dist")))
@@ -32,7 +33,6 @@ app.use("/api/users", require("./routes/userRoutes"))
 //   app.get("/", (req, res) => res.send("please setup production server before"))
 // }
 
-// app.use(errorHandler)
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)
