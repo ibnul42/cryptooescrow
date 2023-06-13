@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaCopy } from 'react-icons/fa'
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
-    // function CopyToClipboardExample() {
+    const navigate = useNavigate()
     const [copied, setCopied] = useState(false);
-    const tranxId = '1fjd7soJH8dsfhh0JUl1JH8dsfhh0JUl1';
+    const tranxId = 'bc1q6gtdj00kqy5u9dau5p0vtjefa0d4ljnhln0gpe';
+
+    const { user, isError, message, isRegistered } = useSelector((state) => state.auth)
+
+    useEffect(() => {
+        if (!user) {
+            navigate('/')
+        }
+    }, [user, navigate])
 
     const handleCopy = () => {
         navigator.clipboard.writeText(tranxId)
@@ -27,8 +37,8 @@ const Order = () => {
                     <button className='bg-primary px-5 py-1 text-white rounded'>Submit</button>
                 </div>
                 <p className='my-2 font-medium underline underline-offset-4 decoration-gray-300'>Order Details:</p>
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="pr-10">
+                <div className="grid grid-cols-12">
+                    <div className="pr-10 col-span-12 md:col-span-5">
                         <div className="flex justify-between">
                             <p>Total amount</p>
                             <div className="flex flex-col">
@@ -38,13 +48,16 @@ const Order = () => {
                         </div>
                         <p className='text-primary'><span className='text-red-500'>*</span>10% amounts of the website includes</p>
                     </div>
-                    <div className="border-l px-2">
+                    <div className="md:border-l md:px-2 col-span-12 md:col-span-7">
                         <p>Please send to address:</p>
                         <div className="flex flex-col md:flex-row gap-2 items-center">
-                            <p className='px-2 py-1 border border-dashed rounded text-sm md:text-base'>{tranxId}</p>
+                            <p className='px-2 py-1 border border-dashed rounded text-sm break-all'>{tranxId}</p>
                             <p onClick={handleCopy} className={`${copied ? 'text-primary' : 'cursor-pointer'} self-start md:self-center`}>{copied ? 'Copied' : <FaCopy className='h-5 w-5' />}</p>
                         </div>
                         <p className='my-2'>Or Scan the QR Code:</p>
+                        <div className='w-20 h-20 p-2 border border-primary'>
+                            <img src="/assets/qrCode.jpeg" className='h-full w-full' alt="" />
+                        </div>
 
                     </div>
                 </div>

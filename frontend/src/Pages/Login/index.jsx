@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
-import { login } from "../../features/auth/authSlice"
+import { login, reset } from "../../features/auth/authSlice"
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaLock } from 'react-icons/fa'
 
@@ -31,11 +31,17 @@ const Login = () => {
     // if (logoutUser) {
     //   toast.success("Logout successfull!")
     // }
-    if (user && logoutUser === false) {
+    if(isLoggedIn) {
       toast.success("Login successfull!")
       navigate("/")
     }
-  }, [user, isSuccess, isError, logoutUser, message, navigate])
+    if (user && logoutUser === false) {
+      navigate("/")
+    }
+    return () => {
+      dispatch(reset())
+    }
+  }, [user, isSuccess, isError, logoutUser, message, navigate, dispatch, isLoggedIn])
 
   const onChange = (e) => {
     const { name, value } = e.target

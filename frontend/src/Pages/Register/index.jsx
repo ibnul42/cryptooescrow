@@ -52,6 +52,9 @@ const Register = () => {
             dispatch(reset())
             navigate("/login")
         }
+        if (user) {
+            navigate("/")
+        }
         return () => {
             dispatch(reset())
         }

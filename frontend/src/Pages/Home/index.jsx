@@ -57,7 +57,7 @@ const Home = () => {
             </div>
           </div>
           <Link to="/login"
-            className="bg-primary text-center hover:bg-hover text-white bg-primary w-full md:w-1/2 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="text-center hover:bg-hover text-white bg-primary w-full md:w-1/2 font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button"
           >
             Get started now
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </div>
       <div className="col-span-2 md:col-span-1">
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col md:flex-row items-center gap-5">
           <div className="relative h-28 w-36">
             <div className="absolute flex justify-center h-28 w-36">
               <div className="h-full w-full rounded-[999px] bg-[rgba(255,228,111,0.5)]"></div>
@@ -80,9 +80,9 @@ const Home = () => {
               <p className='uppercase text-[#ea8907] text-3xl font-bold'>.com</p>
             </div>
           </div>
-          <p className='font-semibold text-2xl px-10'>Buy or sell domains and websites securely</p>
+          <p className='font-semibold text-2xl px-0 md:pl-20 lg:px-10'>Buy or sell domains and websites securely</p>
         </div>
-        <div className="font-medium text-gray-400 flex flex-col gap-3 px-10 py-10">
+        <div className="font-medium text-gray-400 flex flex-col gap-3 md:px-5 lg:px-10 py-10">
           <p className='flex gap-2 items-center font-semibold text-white'> <img src="/assets/security2.svg" className='h-4 w-4' alt="" /> Buyer and seller agree on terms</p>
           <p className='flex gap-2 items-center'><img src="/assets/security.svg" className='h-4 w-4' alt="" /> Buyer pays Cryptooescrow.com</p>
           <p className='flex gap-2 items-center'><img src="/assets/security.svg" className='h-4 w-4' alt="" /> Seller transfers the domain name</p>
