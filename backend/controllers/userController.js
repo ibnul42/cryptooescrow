@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const User = require("../models/userModel")
+const Order = require("../models/orderModel")
 
 const registerUser = asyncHandler(async (req, res) => {
   const { type, email, password } = req.body
@@ -134,6 +135,25 @@ const updateProfile = asyncHandler(async (req, res) => {
   }
 })
 
+const newOrder = asyncHandler(async (req, res) => {
+  const { id, message } = req.body
+  if (!id || !message) {
+    res.status(404)
+    throw new Error("Invalid data for order")
+  }
+
+  const order = await Order.create({id, message})
+  if (order) {
+    res.status(201)
+    res.json({
+      message: "Order created successfully!"
+    })
+  } else {
+    res.status(404)
+    throw new Error("Invalid data for order")
+  }
+})
+
 // generate token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -146,4 +166,5 @@ module.exports = {
   LoginUser,
   getMe,
   updateProfile,
+  newOrder
 }

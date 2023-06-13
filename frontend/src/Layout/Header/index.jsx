@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { FiLogOut } from 'react-icons/fi'
 import { logout, reset } from "../../features/auth/authSlice"
 import { toast } from "react-toastify"
+import {BsPersonCircle} from 'react-icons/bs'
 
 function Header({ open, setOpen, headerStyle, isHomePage }) {
   const dispatch = useDispatch()
@@ -84,9 +85,11 @@ function Header({ open, setOpen, headerStyle, isHomePage }) {
         </ul>
         {user ?
           <div className="flex items-center gap-3">
+            <Link to="" className="hidden md:flex items-center justify-center"><AiOutlineSearch fill={`${isHomePage ? 'white' : 'black'}`} className="h-5 w-5" /></Link>
             <Link to="/order" className={`px-3 py-1 border border-primary text-primary rounded hover:bg-primary hover:text-white`}>Order</Link>
             <div className="h-6 w-6 rounded-full overflow-hidden cursor-pointer">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" className="h-full w-full object-cover object-top" alt="" />
+              {/* <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" className="h-full w-full object-cover object-top" alt="" /> */}
+              <BsPersonCircle className="h-full w-full text-black" />
             </div>
             <div className="cursor-pointer" onClick={logoutHandler}>
               <FiLogOut className={`w-6 h-6 ${isHomePage ? 'text-white': 'text-black'}`} />
